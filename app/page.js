@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { FaSearch, FaTimes } from 'react-icons/fa';
+import { FaSearch, FaTimes, FaSadTear } from 'react-icons/fa'; // Added FaSadTear for no results icon
 import { motion } from 'framer-motion';
 import { debounce } from 'lodash';
 
@@ -98,8 +98,10 @@ export default function Home() {
           ) : (
             !loading && (
               <div className="flex flex-col items-center space-y-4">
-                <img src="/no-results.svg" alt="No Results" className="w-40 h-40" />
-                <p className="text-center text-gray-700 dark:text-gray-300">No results found. Try a different query.</p>
+                <FaSadTear className="text-5xl text-gray-500 dark:text-gray-400" />
+                <p className="text-center text-gray-700 dark:text-gray-300">
+                  No results found. Try a different query.
+                </p>
               </div>
             )
           )}
