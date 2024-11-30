@@ -12,8 +12,11 @@
     "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.46.2",
     "next": "14.2.5",
     "react": "^18",
+    "react-icons": "^5.3.0",
+    "framer-motion": "^11.12.0",
     "react-dom": "^18"
   },
   "devDependencies": {
